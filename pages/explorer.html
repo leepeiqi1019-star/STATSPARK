@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Statistics Explorer | STATSPARK</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    
+<!-- NAVIGATION BAR -->
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="../index.html" class="logo">
+            STATSPARK
+        </a>
+
+        <button id="menuToggle" class="menu-toggle">
+            ☰
+        </button>
+
+        <nav id="navMenu" class="nav-menu">
+
+            <a href="../index.html">Home</a>
+            <a href="learning.html">Learning Hub</a>
+            <a href="explorer.html" class="active">Statistics Explorer</a>
+            <a href="probability.html">Probability Lab</a>
+            <a href="distribution.html">Distribution Simulator</a>
+            <a href="regression.html">Regression Visualizer</a>
+            <a href="quest.html">Quest Centre</a>
+            <a href="progress.html">Progress Tracker</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+
+        <div class="container">
+
+            <p class="section-label">INTERACTIVE LEARNING</p>
+
+            <h1>Statistics Explorer</h1>
+
+            <p>
+                Explore your data and discover
+                the power of statistics.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPLORER INTRODUCTION -->
+    <section class="section-padding">
+
+        <div class="container">
+
+            <h2>Interactive Statistics Calculator</h2>
+
+            <p>
+                Enter your own dataset and let STATSPARK
+                calculate the statistical measures for you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CALCULATOR SECTION -->
+    <section class="section-padding">
+
+        <div class="container">
+
+          <div class="explorer-card">
+
+    <h3>Enter Your Dataset</h3>
+
+    <p>
+        Separate each number using a comma.
+    </p>
+
+    <input
+        type="text"
+        id="dataInput"
+        placeholder="Example: 2, 4, 6, 8, 10"
+    >
+<p class="input-hint">
+    Tip: Enter numbers separated by commas. Decimals and negative values are also accepted.
+</p>
+    <div class="explorer-buttons">
+
+        <button id="calculateBtn" class="btn btn-primary">
+            Calculate
+        </button>
+
+        <button id="clearBtn" class="btn btn-secondary">
+            Clear
+        </button>
+
+        <button id="sampleBtn" class="btn btn-secondary">
+            Try Another Dataset
+        </button>
+
+    </div>
+
+    <p id="errorMessage"></p>
+
+          </div>
+
+    
+
+
+            <!-- RESULTS -->
+            <div class="explorer-card">
+
+                <h3>Statistical Results</h3>
+
+                <div class="results-grid">
+
+                    <div class="result-box">
+                        <p>Mean</p>
+                        <h3 id="meanResult">-</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <p>Median</p>
+                        <h3 id="medianResult">-</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <p>Mode</p>
+                        <h3 id="modeResult">-</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <p>Range</p>
+                        <h3 id="rangeResult">-</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <p>Variance</p>
+                        <h3 id="varianceResult">-</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <p>Standard Deviation</p>
+                        <h3 id="sdResult">-</h3>
+                    </div>
+
+                </div>
+
+            </div>
+          
+<!-- DATASET COMPARISON -->
+<div class="explorer-card">
+
+    <h2>Dataset Comparison</h2>
+
+    <p>
+        Compare two datasets and discover their statistical differences.
+    </p>
+
+    <div class="comparison-inputs">
+
+        <div class="comparison-group">
+
+            <label for="datasetA">Dataset A</label>
+
+            <input
+                type="text"
+                id="datasetA"
+                placeholder="e.g. 2, 4, 4, 6, 8"
+            >
+
+        </div>
+
+        <div class="comparison-group">
+
+            <label for="datasetB">Dataset B</label>
+
+            <input
+                type="text"
+                id="datasetB"
+                placeholder="e.g. 5, 6, 7, 8, 9"
+            >
+
+        </div>
+
+    </div>
+
+    <p id="comparisonError" class="error-message"></p>
+
+    <button id="compareBtn" class="btn btn-primary">
+    Compare Datasets
+    </button>
+
+    <div id="comparisonResults">
+
+        <p>
+            Enter two datasets and click Compare Datasets
+            to view the comparison.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- CALCULATION HISTORY -->
+<div class="explorer-card">
+
+    <h2>Calculation History</h2>
+
+    <p>
+        Review your previous calculations.
+    </p>
+
+    <div id="historyContent">
+
+        <p>No calculation history yet.</p>
+
+    </div>
+<button id="clearHistoryBtn" class="btn btn-secondary">
+  
+    Clear History
+</button>
+</div>
+        </div>
+
+    </section>
+
+    <!-- STEP-BY-STEP EXPLANATION -->
+    <section class="section-padding">
+
+        <div class="container">
+
+            <div class="explorer-card">
+
+                <h2>Step-by-Step Explanation</h2>
+
+                <p>
+                    Understand how each statistical
+                    measure is calculated from your dataset.
+                </p>
+<!-- QUICK INTERPRETATION -->
+<div class="explorer-card">
+
+    <h2>Quick Interpretation</h2>
+
+    <p>
+        Understand what your statistical results tell you.
+    </p>
+
+    <div id="interpretationContent">
+
+        <p>Calculate your dataset to view the interpretation.</p>
+
+    </div>
+
+</div>
+                <div id="explanationContent">
+
+                    <p>
+                        Enter your dataset and click
+                        Calculate to view the explanation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <h3>STATSPARK</h3>
+
+            <p>Don't Just Calculate. Discover.</p>
+
+            <p class="copyright">
+                © <span id="currentYear"></span>
+                STATSPARK. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/statistics.js"></script>
+
+</body>
+</html>
