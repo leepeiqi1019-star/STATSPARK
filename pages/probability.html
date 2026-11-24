@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Probability Lab | STATSPARK</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    
+<!-- NAVIGATION BAR -->
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="../index.html" class="logo">
+            STATSPARK
+        </a>
+
+        <button id="menuToggle" class="menu-toggle">
+            ☰
+        </button>
+
+        <nav id="navMenu" class="nav-menu">
+
+            <a href="../index.html">Home</a>
+            <a href="learning.html">Learning Hub</a>
+            <a href="explorer.html">Statistics Explorer</a>
+            <a href="probability.html" class="active">Probability Lab</a>
+            <a href="distribution.html">Distribution Simulator</a>
+            <a href="regression.html">Regression Visualizer</a>
+            <a href="quest.html">Quest Centre</a>
+            <a href="progress.html">Progress Tracker</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+
+        <div class="container">
+
+            <p class="section-label">INTERACTIVE LEARNING</p>
+
+            <h1>Probability Lab</h1>
+
+            <p>
+                Discover probability through interactive experiments.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="section-padding">
+
+        <div class="container">
+
+            <h2>Explore Probability</h2>
+
+            <p>
+                Experiment with probability concepts,
+                calculate possible outcomes and understand
+                how probability works in real situations.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- BASIC PROBABILITY -->
+    <section class="section-padding">
+
+        <div class="container">
+
+            <div class="explorer-card">
+
+                <h2>Basic Probability Calculator</h2>
+
+                <p>
+                    Calculate the probability of an event
+                    using the number of favourable outcomes
+                    and total possible outcomes.
+                </p>
+
+                <div class="comparison-group">
+
+                    <label for="favourableInput">
+                        Number of Favourable Outcomes
+                    </label>
+
+                    <input
+                        type="number"
+                        id="favourableInput"
+                        placeholder="e.g. 3"
+                        min="0"
+                    >
+
+                </div>
+
+                <div class="comparison-group">
+
+                    <label for="totalInput">
+                        Total Number of Outcomes
+                    </label>
+
+                    <input
+                        type="number"
+                        id="totalInput"
+                        placeholder="e.g. 6"
+                        min="1"
+                    >
+
+                </div>
+
+                <button id="basicProbabilityBtn" class="btn btn-primary">
+                    Calculate Probability
+                </button>
+
+                <p id="basicError" class="error-message"></p>
+
+                <div id="basicResult">
+                    <p>Enter the values to calculate probability.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPLEMENTARY PROBABILITY -->
+    <section class="section-padding">
+
+        <div class="container">
+
+            <div class="explorer-card">
+
+                <h2>Complementary Probability</h2>
+
+                <p>
+                    Find the probability that an event
+                    does not occur.
+                </p>
+
+                <div class="comparison-group">
+
+                    <label for="eventProbability">
+                        Probability of Event P(A)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="eventProbability"
+                        placeholder="e.g. 0.4"
+                        min="0"
+                        max="1"
+                        step="any"
+                    >
+
+                </div>
+
+                <button id="complementBtn" class="btn btn-primary">
+                    Calculate Complement
+                </button>
+
+                <p id="complementError" class="error-message"></p>
+
+                <div id="complementResult">
+                    <p>Enter P(A) to find P(A').</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROBABILITY EXPERIMENT -->
+    <section class="section-padding">
+
+        <div class="container">
+
+            <div class="explorer-card">
+
+                <h2>Interactive Probability Experiment</h2>
+
+                <p>
+                    Explore the possible outcomes of rolling
+                    a six-sided die.
+                </p>
+
+                <div id="diceResult">
+                    <p>Click the button to roll the die.</p>
+                </div>
+
+                <button id="rollDiceBtn" class="btn btn-primary">
+                    Roll the Dice
+                </button>
+<button id="resetDiceBtn" class="btn btn-secondary">
+    Reset Experiment
+</button>
+                <div id="diceHistory">
+                    <p>No rolls yet.</p>
+                </div>
+<!-- DICE FREQUENCY CHART -->
+<div class="chart-container">
+
+    <h3>Dice Frequency Chart</h3>
+
+    <p>
+        Observe how frequently each number appears
+        during the experiment.
+    </p>
+
+    <div id="diceChart">
+        <p>Roll the dice to generate the chart.</p>
+    </div>
+
+</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <h3>STATSPARK</h3>
+
+            <p>Don't Just Calculate. Discover.</p>
+
+            <p class="copyright">
+                © <span id="currentYear"></span>
+                STATSPARK. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/probability.js"></script>
+
+</body>
+</html>
