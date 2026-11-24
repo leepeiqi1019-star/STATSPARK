@@ -1,0 +1,803 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Hub | STATSPARK</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    
+<!-- NAVIGATION BAR -->
+<header class="navbar">
+    <div class="container nav-container">
+
+        <a href="../index.html" class="logo">
+            STAT<span>SPARK</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <nav id="navMenu">
+            <a href="../index.html">Home</a>
+            <a href="learning.html" class="active">Learning Hub</a>
+            <a href="explorer.html">Statistics Explorer</a>
+            <a href="probability.html">Probability Lab</a>
+            <a href="distribution.html">Distribution Simulator</a>
+            <a href="regression.html">Regression Visualizer</a>
+            <a href="quest.html">Quest Centre</a>
+            <a href="progress.html">Progress Tracker</a>
+        </nav>
+
+    </div>
+</header>
+
+
+
+    <!-- PAGE HERO -->
+    <section class="hero">
+        <div class="container">
+
+            <p class="hero-label">STATSPARK LEARNING HUB</p>
+
+            <h1>
+                Learn Statistics.
+                <span>Understand Better.</span>
+            </h1>
+
+            <p class="hero-description">
+                Explore Statistics topics, understand important
+                formulas and learn through worked examples.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- TOPIC INTRODUCTION -->
+    <section class="section-padding">
+        <div class="container">
+
+            <p class="section-label">YOUR LEARNING JOURNEY</p>
+
+            <h2>Explore Statistics Topics</h2>
+
+            <p class="section-description">
+                Choose a topic and start building your
+                mathematical understanding.
+            </p>
+
+
+            <!-- TOPIC CARDS -->
+            <div class="card-grid">
+
+                <a href="#data-description" class="module-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Data Description</h3>
+                    <p>
+                        Mean, median, mode, variance
+                        and standard deviation.
+                    </p>
+                    <span>Learn More →</span>
+                </a>
+
+
+                <a href="#probability" class="module-card">
+                    <div class="card-icon">🎲</div>
+                    <h3>Probability</h3>
+                    <p>
+                        Understand probability and
+                        basic probability rules.
+                    </p>
+                    <span>Learn More →</span>
+                </a>
+
+
+                <a href="#random-variables" class="module-card">
+                    <div class="card-icon">🔢</div>
+                    <h3>Random Variables</h3>
+                    <p>
+                        Explore discrete random variables
+                        and expected values.
+                    </p>
+                    <span>Learn More →</span>
+                </a>
+
+
+                <a href="#distributions" class="module-card">
+                    <div class="card-icon">📈</div>
+                    <h3>Probability Distributions</h3>
+                    <p>
+                        Discover Binomial, Poisson
+                        and Normal distributions.
+                    </p>
+                    <span>Learn More →</span>
+                </a>
+
+
+                <a href="#regression" class="module-card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Correlation & Regression</h3>
+                    <p>
+                        Understand relationships
+                        between two variables.
+                    </p>
+                    <span>Learn More →</span>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+  
+  <!-- TOPIC SEARCH -->
+<section class="topic-search">
+    <div class="container">
+        <h2>Find Your Topic</h2>
+        <p>Search for a Statistics topic you want to learn.</p>
+
+        <input
+            type="text"
+            id="topicSearch"
+            placeholder="Search topics... e.g. Probability"
+        >
+
+        <p id="searchMessage"></p>
+    </div>
+</section>
+
+<!-- TOPIC 1: DATA DESCRIPTION -->
+<section class="section-padding" id="data-description">
+        <div class="container">
+
+            <p class="section-label">TOPIC 01</p>
+
+            <h2>Data Description</h2>
+
+            <p>
+                Data description involves organising,
+                summarising and interpreting data using
+                statistical measures.
+            </p>
+
+            <h3>1. Measures of Central Tendency</h3>
+
+            <p><strong>Mean:</strong> The average value of a dataset.</p>
+
+            <div class="formula-box">
+                Mean = Sum of all observations / Number of observations
+            </div>
+
+            <p><strong>Median:</strong> The middle value after arranging
+            the data in ascending or descending order.</p>
+
+            <p><strong>Mode:</strong> The value that occurs most frequently.</p>
+          <!-- EXPANDABLE NOTES -->
+<div class="expandable-notes">
+
+    <button class="notes-toggle" onclick="toggleNotes('notes1')">
+        + More Notes
+    </button>
+
+    <div class="notes-content" id="notes1" hidden>
+
+        <h4>Remember This!</h4>
+
+        <ul>
+            <li>Mean is affected by extreme values.</li>
+            <li>Median is useful when the dataset contains outliers.</li>
+            <li>Mode can be used for both numerical and categorical data.</li>
+        </ul>
+
+        <p>
+            <strong>Exam Tip:</strong>
+            Always arrange the data in ascending order
+            before finding the median.
+        </p>
+
+    </div>
+
+</div>
+
+
+            <h3>2. Measures of Dispersion</h3>
+
+            <p><strong>Range:</strong> Difference between the maximum
+            and minimum values.</p>
+
+            <div class="formula-box">
+                Range = Maximum value - Minimum value
+            </div>
+
+            <p><strong>Variance:</strong> Measures how spread out
+            the observations are from the mean.</p>
+
+            <p><strong>Standard Deviation:</strong> The square root
+            of the variance.</p>
+
+
+            <div class="example-box">
+
+                <h3>Worked Example</h3>
+
+                <p>Given the dataset:</p>
+
+                <div class="formula-box">
+                    2, 4, 6, 8, 10
+                </div>
+
+                <p><strong>Step 1: Calculate the Mean</strong></p>
+
+                <p>
+                    Mean = (2 + 4 + 6 + 8 + 10) / 5
+                </p>
+
+                <p><strong>Answer: 6</strong></p>
+
+                <p><strong>Step 2: Find the Median</strong></p>
+
+                <p>
+                    The middle value is 6.
+                </p>
+
+                <p><strong>Answer: 6</strong></p>
+
+                <p><strong>Step 3: Find the Range</strong></p>
+
+                <p>
+                    Range = 10 - 2
+                </p>
+
+                <p><strong>Answer: 8</strong></p>
+
+            </div>
+
+            <a href="explorer.html" class="btn btn-primary">
+                Try Data Explorer →
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- TOPIC 2: PROBABILITY -->
+    <section class="section-padding" id="probability">
+
+        <div class="container">
+
+            <p class="section-label">TOPIC 02</p>
+
+            <h2>Probability</h2>
+
+            <p>
+                Probability measures the likelihood of an event
+                occurring. Its value ranges from 0 to 1.
+            </p>
+
+            <h3>Basic Probability Formula</h3>
+
+            <div class="formula-box">
+                P(A) = Number of favourable outcomes
+                / Total number of equally likely outcomes
+            </div>
+
+            <h3>Important Concepts</h3>
+
+            <p>
+                <strong>Complementary Event:</strong>
+                The event that A does not occur.
+            </p>
+
+            <div class="formula-box">
+                P(A') = 1 - P(A)
+            </div>
+
+            <p>
+                <strong>Addition Rule:</strong>
+                Used to calculate the probability that
+                at least one of two events occurs.
+            </p>
+
+            <div class="formula-box">
+                P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
+            </div>
+
+            <p>
+                <strong>Multiplication Rule:</strong>
+                Used to calculate the probability
+                of two events occurring together.
+            </p>
+
+            <div class="formula-box">
+                P(A ∩ B) = P(A) × P(B|A)
+            </div>
+          <!-- EXPANDABLE NOTES -->
+<div class="expandable-notes">
+
+    <button class="notes-toggle" onclick="toggleNotes('notes2')">
+        + More Notes
+    </button>
+
+    <div class="notes-content" id="notes2" hidden>
+
+        <h4>Remember This!</h4>
+
+        <ul>
+            <li>Probability values are always between 0 and 1.</li>
+            <li>An impossible event has a probability of 0.</li>
+            <li>A certain event has a probability of 1.</li>
+            <li>The sum of probabilities of all possible outcomes is 1.</li>
+        </ul>
+
+        <p>
+            <strong>Exam Tip:</strong>
+            Read the question carefully to identify
+            whether it involves an addition rule,
+            multiplication rule or complementary event.
+        </p>
+
+    </div>
+
+</div>
+
+
+            <div class="example-box">
+
+                <h3>Worked Example</h3>
+
+                <p>
+                    A fair coin is tossed once.
+                    Find the probability of getting a head.
+                </p>
+
+                <p><strong>Step 1:</strong> Identify the outcomes.</p>
+
+                <p>
+                    Head and Tail.
+                </p>
+
+                <p><strong>Step 2:</strong> Identify favourable outcomes.</p>
+
+                <p>
+                    There is only one favourable outcome: Head.
+                </p>
+
+                <p><strong>Step 3:</strong> Apply the formula.</p>
+
+                <p>
+                    P(Head) = 1 / 2
+                </p>
+
+                <p><strong>Answer: 0.5</strong></p>
+
+            </div>
+
+            <a href="probability.html" class="btn btn-primary">
+                Try Probability Lab →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- TOPIC 3: RANDOM VARIABLES -->
+    <section class="section-padding" id="random-variables">
+
+        <div class="container">
+
+            <p class="section-label">TOPIC 03</p>
+
+            <h2>Random Variables</h2>
+
+            <p>
+                A random variable assigns a numerical value
+                to each possible outcome of a random experiment.
+            </p>
+
+            <h3>Expected Value</h3>
+
+            <div class="formula-box">
+                E(X) = Σ xP(X = x)
+            </div>
+
+            <p>
+                Expected value represents the long-run
+                average outcome of a random variable.
+            </p>
+
+            <h3>Variance</h3>
+
+            <div class="formula-box">
+                Var(X) = E(X²) - [E(X)]²
+            </div>
+          
+<!-- WORKED EXAMPLE -->
+<div class="worked-example">
+
+    <h3>Worked Example</h3>
+
+    <h4>Question</h4>
+
+    <p>
+        A discrete random variable X has the following
+        probability distribution:
+    </p>
+
+    <table>
+        <tr>
+            <th>x</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+        </tr>
+        <tr>
+            <th>P(X = x)</th>
+            <td>0.2</td>
+            <td>0.5</td>
+            <td>0.3</td>
+        </tr>
+    </table>
+
+    <p>Calculate:</p>
+
+    <ol>
+        <li>The expected value, E(X).</li>
+        <li>The variance, Var(X).</li>
+    </ol>
+
+    <h4>Step-by-Step Solution</h4>
+
+    <p><strong>Step 1: Calculate E(X)</strong></p>
+
+    <div class="formula-box">
+        E(X) = Σ xP(X = x)
+    </div>
+
+    <div class="formula-box">
+        = (1)(0.2) + (2)(0.5) + (3)(0.3)
+    </div>
+
+    <div class="formula-box">
+        = 0.2 + 1.0 + 0.9
+    </div>
+
+    <div class="formula-box">
+        = 2.1
+    </div>
+
+    <p><strong>Step 2: Calculate E(X²)</strong></p>
+
+    <div class="formula-box">
+        E(X²) = Σ x²P(X = x)
+    </div>
+
+    <div class="formula-box">
+        = (1²)(0.2) + (2²)(0.5) + (3²)(0.3)
+    </div>
+
+    <div class="formula-box">
+        = 0.2 + 2.0 + 2.7
+    </div>
+
+    <div class="formula-box">
+        = 4.9
+    </div>
+
+    <p><strong>Step 3: Calculate Variance</strong></p>
+
+    <div class="formula-box">
+        Var(X) = E(X²) - [E(X)]²
+    </div>
+
+    <div class="formula-box">
+        = 4.9 - (2.1)²
+    </div>
+
+    <div class="formula-box">
+        = 4.9 - 4.41
+    </div>
+
+    <div class="formula-box">
+        = 0.49
+    </div>
+
+    <h4>Final Answer</h4>
+
+    <p>
+        <strong>Expected Value:</strong> 2.1
+    </p>
+
+    <p>
+        <strong>Variance:</strong> 0.49
+    </p>
+
+</div>
+
+<!-- EXPANDABLE NOTES -->
+<div class="expandable-notes">
+
+    <button class="notes-toggle" onclick="toggleNotes('notes3')">
+        + More Notes
+    </button>
+
+    <div class="notes-content" id="notes3" hidden>
+
+        <h4>Remember This!</h4>
+
+        <ul>
+            <li>A random variable assigns numerical values to outcomes.</li>
+            <li>Expected value represents the long-run average.</li>
+            <li>Variance measures how spread out the values are around the expected value.</li>
+            <li>A larger variance indicates greater variability.</li>
+        </ul>
+
+        <p>
+            <strong>Exam Tip:</strong>
+            Remember that variance is expressed in squared units,
+            while standard deviation is expressed in the original units.
+        </p>
+
+    </div>
+
+</div>
+        </div>
+      <a href="explorer.html" class="btn btn-primary">
+    Try Random Variables Explorer →
+      </a>
+
+    </section>
+
+
+    <!-- TOPIC 4: DISTRIBUTIONS -->
+    <section class="section-padding" id="distributions">
+
+        <div class="container">
+
+            <p class="section-label">TOPIC 04</p>
+
+            <h2>Probability Distributions</h2>
+
+            <p>
+                Probability distributions describe how
+                probabilities are assigned to possible values
+                of a random variable.
+            </p>
+
+            <h3>Binomial Distribution</h3>
+
+            <p>
+                Used when there are a fixed number of independent
+                trials, each with two possible outcomes and
+                a constant probability of success.
+            </p>
+
+            <div class="formula-box">
+                P(X = x) = C(n,x) p^x (1-p)^(n-x)
+            </div>
+
+<!-- WORKED EXAMPLE -->
+<div class="worked-example">
+
+    <h3>Worked Example</h3>
+
+    <h4>Question</h4>
+
+    <p>
+        A student has a probability of 0.4 of answering
+        a multiple-choice question correctly.
+        The student answers 5 independent questions.
+    </p>
+
+    <p>
+        Let X represent the number of questions
+        answered correctly.
+    </p>
+
+    <p>Calculate the probability that the student answers exactly 2 questions correctly.</p>
+
+    <h4>Step-by-Step Solution</h4>
+
+    <p><strong>Step 1: Identify the values</strong></p>
+
+    <div class="formula-box">
+        n = 5
+    </div>
+
+    <div class="formula-box">
+        p = 0.4
+    </div>
+
+    <div class="formula-box">
+        x = 2
+    </div>
+
+    <p><strong>Step 2: Apply the Binomial Formula</strong></p>
+
+    <div class="formula-box">
+        P(X = x) = C(n,x) p^x (1-p)^(n-x)
+    </div>
+
+    <div class="formula-box">
+        P(X = 2) = C(5,2)(0.4)²(0.6)³
+    </div>
+
+    <p><strong>Step 3: Calculate</strong></p>
+
+    <div class="formula-box">
+        = 10 × 0.16 × 0.216
+    </div>
+
+    <div class="formula-box">
+        = 0.3456
+    </div>
+
+    <h4>Final Answer</h4>
+
+    <p>
+        The probability that the student answers
+        exactly 2 questions correctly is:
+    </p>
+
+    <div class="formula-box">
+        P(X = 2) = 0.3456
+    </div>
+
+</div>
+
+            <h3>Poisson Distribution</h3>
+
+            <p>
+                Used to model the number of occurrences
+                in a fixed interval under suitable assumptions.
+            </p>
+
+            <div class="formula-box">
+                P(X = x) = (e^-λ × λ^x) / x!
+            </div>
+
+            <h3>Normal Distribution</h3>
+
+            <p>
+                A continuous probability distribution
+                with a symmetric, bell-shaped curve.
+            </p>
+<!-- EXPANDABLE NOTES -->
+<div class="expandable-notes">
+
+    <button class="notes-toggle" onclick="toggleNotes('notes4')">
+        + More Notes
+    </button>
+
+    <div class="notes-content" id="notes4" hidden>
+
+        <h4>Remember This!</h4>
+
+        <ul>
+            <li>Binomial distribution involves a fixed number of independent trials.</li>
+            <li>Each binomial trial has two possible outcomes: success or failure.</li>
+            <li>Poisson distribution models the number of occurrences in a fixed interval.</li>
+            <li>Normal distribution is symmetric and bell-shaped.</li>
+            <li>In a normal distribution, the mean, median and mode are equal.</li>
+        </ul>
+
+        <p>
+            <strong>Exam Tip:</strong>
+            Identify the characteristics of the question
+            before deciding which probability distribution to use.
+        </p>
+
+    </div>
+
+</div>
+            <a href="distribution.html" class="btn btn-primary">
+                Try Distribution Simulator →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- TOPIC 5: CORRELATION AND REGRESSION -->
+    <section class="section-padding" id="regression">
+
+        <div class="container">
+
+            <p class="section-label">TOPIC 05</p>
+
+            <h2>Correlation & Regression</h2>
+
+            <p>
+                Correlation measures the strength and direction
+                of the relationship between two variables.
+            </p>
+
+            <h3>Correlation Coefficient</h3>
+
+            <p>
+                The correlation coefficient, r, ranges
+                from -1 to +1.
+            </p>
+
+            <ul>
+                <li>r = +1: Perfect positive correlation</li>
+                <li>r = -1: Perfect negative correlation</li>
+                <li>r = 0: No linear correlation</li>
+            </ul>
+
+            <h3>Linear Regression</h3>
+
+            <div class="formula-box">
+                y = a + bx
+            </div>
+
+<!-- WORKED EXAMPLE -->
+<div class="worked-example">
+
+    <h3>Worked Example</h3>
+
+    <h4>Question</h4>
+
+    <p>
+        The correlation coefficient between the number
+        of hours studied (X) and examination marks (Y)
+        is 0.85.
+    </p>
+
+    <p>Answer the following questions:</p>
+
+    <ol>
+        <li>Interpret the correlation coefficient.</li>
+        <li>Given the regression equation Y = 30 + 8X, estimate the examination mark when a student studies for 5 hours.</li>
+    </ol>
+
+    <h4>Step-by-Step Solution</h4>
+
+    <p><strong>Step 1: Interpret the correlation coefficient</strong></p>
+
+    <p>
+        Since r = 0.85 is positive and close to +1,
+        there is a strong positive linear correlation
+        between study hours and examination marks.
+    </p>
+
+    <p><strong>Step 2: Identify the regression equation</strong></p>
+
+    <div class="formula-box">
+        Y = 30 + 8X
+    </div>
+
+    <p>
+        Given that X = 5 hours, substitute X = 5
+        into the regression equation.
+    </p>
+
+    <p><strong>Step 3: Calculate the predicted mark</strong></p>
+
+    <div class="formula-box">
+        Y = 30 + 8(5)
+    </div>
+
+    <div class="formula-box">
+        Y = 30 + 40
+    </div>
+
+    <div class="formula-box">
+        Y = 70
+    </div>
+
+    <h4>Final Answer</h4>
+
+    <p>
+        <strong>Correlation:</strong>
+        Strong positive linear corr
