@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Regression Visualizer | STATSPARK</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <a href="../index.html" class="logo">
+                STATSPARK
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="../index.html">Home</a>
+                <a href="learning.html">Learning Hub</a>
+                <a href="explorer.html">Statistics Explorer</a>
+                <a href="probability.html">Probability Lab</a>
+                <a href="distribution.html">Distribution Simulator</a>
+                <a href="regression.html" class="active">Regression Visualizer</a>
+<a href="quest.html">Quest Centre</a>
+<a href="progress.html">Progress Tracker</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="page-hero">
+
+        <div class="container">
+
+            <h1>Regression Visualizer</h1>
+
+            <p>
+                Explore the relationship between two variables
+                through correlation and linear regression.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- REGRESSION INTRODUCTION -->
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <h2>Explore Correlation & Regression</h2>
+
+                <p>
+                    Enter your own data and discover
+                    the relationship between X and Y.
+                </p>
+            </div>
+
+
+            <!-- DATA INPUT -->
+            <div class="calculator-card">
+
+                <h3>Enter Your Data</h3>
+
+                <p>
+                    Enter paired X and Y values separated by commas.
+                    Both datasets must contain the same number of values.
+                </p>
+
+                <div class="regression-input-grid">
+
+    <div class="regression-input-box">
+        <label for="regressionX">
+            X Values
+        </label>
+
+        <textarea
+            id="regressionX"
+            rows="4"
+            placeholder="Example: 1, 2, 3, 4, 5"></textarea>
+
+        <small>Enter your independent variable values.</small>
+    </div>
+
+    <div class="regression-input-box">
+        <label for="regressionY">
+            Y Values
+        </label>
+
+        <textarea
+            id="regressionY"
+            rows="4"
+            placeholder="Example: 2, 4, 5, 4, 6"></textarea>
+
+        <small>Enter the corresponding dependent variable values.</small>
+    </div>
+
+                </div>
+
+                <button id="calculateRegression" class="btn btn-primary">
+                    Analyse Data
+                </button>
+
+                <button id="sampleRegression" class="btn btn-secondary">
+                    Load Sample Data
+                </button>
+
+                <button id="clearRegression" class="btn btn-secondary">
+                    Clear Data
+                </button>
+
+                <div id="regressionError"></div>
+
+            </div>
+
+
+            <!-- RESULTS -->
+            <div class="results-card">
+
+                <h3>Regression Results</h3>
+
+                <div class="results-grid">
+
+                    <div class="result-box">
+                        <h4>Correlation (r)</h4>
+                        <p id="correlationResult">-</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h4>Slope (b)</h4>
+                        <p id="slopeResult">-</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h4>Intercept (a)</h4>
+                        <p id="interceptResult">-</p>
+                    </div>
+
+                    <div class="result-box">
+                        <h4>R-Squared</h4>
+                        <p id="rSquaredResult">-</p>
+                    </div>
+
+                </div>
+
+                <div class="formula-box" id="regressionEquation">
+                    Regression Equation: -
+                </div>
+
+            </div>
+
+
+            <!-- SCATTER PLOT -->
+            <div class="results-card">
+
+                <h3>Scatter Plot & Regression Line</h3>
+
+                <p>
+                    Visualise your data points and
+                    the best-fit regression line.
+                </p>
+
+                <div id="regressionChart">
+                    <p>
+                        Your scatter plot will appear here
+                        after analysing the data.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- INTERPRETATION -->
+            <div class="explanation-card">
+
+                <h3>Data Interpretation</h3>
+
+                <div id="regressionExplanation">
+
+                    <p>
+                        Enter your data to view the
+                        correlation and regression interpretation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 STATSPARK. Don't Just Calculate. Discover.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/main.js"></script>
+    <script src="../js/regression.js"></script>
+
+</body>
+
+</html>
